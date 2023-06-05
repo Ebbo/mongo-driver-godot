@@ -22,7 +22,7 @@ jobs:
       - name: Build project
         run: scons platform=windows target=release
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: windows-release-${{ github.sha }}
           if-no-files-found: error
@@ -47,7 +47,7 @@ jobs:
       - name: Build project
         run: scons platform=windows target=debug
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: windows-debug-${{ github.sha }}
           if-no-files-found: error
@@ -71,7 +71,7 @@ jobs:
       - name: Build project
         run: scons platform=linux target=debug
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: linux-debug-${{ github.sha }}
           if-no-files-found: error
@@ -95,7 +95,7 @@ jobs:
       - name: Build project
         run: scons platform=linux target=release
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: linux-release-${{ github.sha }}
           if-no-files-found: error
@@ -120,7 +120,7 @@ jobs:
       - name: Build project
         run: scons platform=osx target=debug
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: osx-debug-${{ github.sha }}
           if-no-files-found: error
@@ -145,7 +145,7 @@ jobs:
       - name: Build project
         run: scons platform=osx target=release
       - name: Upload artificat
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: osx-release-${{ github.sha }}
           if-no-files-found: error
